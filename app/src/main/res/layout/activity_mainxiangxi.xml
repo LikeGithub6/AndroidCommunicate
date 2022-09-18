@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Mainxiangxi">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/xiangxibar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:navigationIcon="@mipmap/back1"
+        app:title="详细"
+        app:titleMarginStart="100dp"
+        app:titleTextColor="@color/black">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/xiangxirefresh"
+        android:layout_below="@id/xiangxibar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/xiangxibar"
+        android:id="@+id/commentrv"
+        android:paddingBottom="50dp"
+        ></androidx.recyclerview.widget.RecyclerView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:id="@+id/linee"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+
+        android:layout_alignParentBottom="true"
+        >
+
+        <LinearLayout
+            android:layout_width="10dp"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/comtext"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:hint="说点好听的"
+            android:gravity="center|left"
+            android:textColor="@color/black"
+            android:background="@drawable/commentyj"
+            android:layout_weight="5"
+            ></TextView>
+        <LinearLayout
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"></LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

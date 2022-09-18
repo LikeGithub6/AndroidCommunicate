@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.teamwork">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/jiemian"
+        android:label="你好,同学"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/jiemian"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:theme">
+        <activity android:name=".tiebashow"></activity>
+        <activity android:name=".MainChat" />
+        <activity android:name=".PictBig" />
+        <activity android:name=".Mainzhuce" />
+        <activity android:name=".Meshoucang" />
+        <activity android:name=".MeGuanZhu" />
+        <activity android:name=".Moshengren" />
+        <activity android:name=".Mechangeinf" />
+        <activity android:name=".Mainxiangxi" />
+        <activity android:name=".MainTopicList" />
+        <activity android:name=".FragmentSecond" />
+        <activity android:name=".Publishother" />
+        <activity android:name=".firstFragment" />
+        <activity android:name=".User" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/provider_paths" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.rfid.application.MyApplication.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".zhuce" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+
+        </activity>
+    </application>
+
+</manifest>
